@@ -156,3 +156,33 @@ h1:hover {
         transform: scale(1);
     }
 }
+
+#fetch-joke {
+    animation: pulse 2s infinite;
+}
+
+.emoji {
+    animation: pulse 3s infinite;
+}
+
+.reactions:hover .emoji {
+    animation: none;
+}
+
+.emoji:active {
+    transform: scale(0.9);
+}
+
+.container {
+    border: 1px solid #ccc;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+#joke {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background: #fafafa;
+}
