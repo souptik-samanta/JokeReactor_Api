@@ -1,0 +1,158 @@
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+h1:hover {
+    color: #007bff;
+}
+
+#joke {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #444;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+#joke:hover {
+    color: #007bff;
+    font-size: 26px;
+}
+
+#fetch-joke {
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #beff0a;
+    color: #000000;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#fetch-joke:hover {
+    background-color: #7ab2ee;
+    transform: scale(1.05);
+}
+
+.reactions {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.emoji {
+    font-size: 40px;
+    cursor: pointer;
+    margin: 0 15px;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.emoji:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+#reaction-display {
+    font-size: 20px;
+    color: #555;
+    margin-top: 15px;
+    transition: color 0.3s;
+}
+
+#reaction-display {
+    color: #444;
+    font-weight: bold;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+#reaction-display {
+    color: #333;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    #joke {
+        font-size: 20px;
+    }
+
+    #fetch-joke {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .emoji {
+        font-size: 35px;
+        margin: 0 10px;
+    }
+
+    #reaction-display {
+        font-size: 18px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
